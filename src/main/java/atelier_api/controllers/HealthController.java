@@ -1,0 +1,18 @@
+package atelier_api.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HealthController {
+
+    @GetMapping("/")
+    public String home() {
+        return "Atelier API OK";
+    }
+
+    @GetMapping("/healthz")
+    public String health() {
+        return "OK";
+    }
+}
